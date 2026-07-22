@@ -330,14 +330,14 @@ button{ font:inherit; color:inherit; cursor:pointer; border:none; background:non
   <img class="photo" id="detailImg" alt="">
   <div class="author">
     <div class="av"></div>
-    <div class="nm"><b id="peerName">Claude<small></small></b><span id="detailTime"></span></div>
+    <div class="nm"><b id="peerName">DeepSeek<small></small></b><span id="detailTime"></span></div>
   </div>
   <h1 id="detailCap"></h1>
   <div class="tags" id="detailTags"></div>
   <div class="views" id="detailViews"></div>
 
   <div class="notes">
-    <div class="nh" id="notesTitle">Claude的评语</div>
+    <div class="nh" id="notesTitle">DeepSeek的评语</div>
     <div id="notesBox"></div>
   </div>
 
@@ -412,7 +412,7 @@ let secret=localStorage.getItem(LS_KEY)||"";
 
 /* sync the AI avatar + remark name from the PWA (same localStorage keys) */
 const peerAvatar=localStorage.getItem("companion_avatar");
-const AI_NAME="Claude";  // keep in sync with the PWA's CONFIG.AI_NAME
+const AI_NAME="DeepSeek";  // keep in sync with the PWA's CONFIG.AI_NAME
 const peerName=(localStorage.getItem("companion_profile_remark")||"").trim()||AI_NAME;
 document.documentElement.style.setProperty("--peer-avatar", peerAvatar?`url("${peerAvatar}")`:'url("avatar-sea.png")');
 
