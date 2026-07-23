@@ -3414,7 +3414,7 @@ function setSessionPopover(open){
 async function loadSessions(){
   if (USE_MOCK || !secret){ activeApiSession = LEGACY_SESSION_ID; renderSessionList(); return; }
   try{
-    const r = await fetch(`${API_BASE}/app/sessions`, { headers: authHeaders() });
+    const r = await fetch(`${API_BASE}/app/sessions?secret=${secret}`, { headers: {} });
     if (!r.ok) throw new Error("sessions " + r.status);
     const d = await r.json();
     apiSessions = Array.isArray(d.sessions) ? d.sessions : [];
